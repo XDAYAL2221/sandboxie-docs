@@ -1,98 +1,78 @@
-Sandboxie Plus user interface offers a multitude of new functionality which improves security, compatibility and the overall sandboxing experience.
+واجهة المستخدم في Sandboxie Plus تقدم مجموعة كبيرة من الوظائف الجديدة التي تحسن الأمان والتوافق وتجربة التحديد الرملية بشكل عام.
 
-Some of these features (*) are however only available to users with a [Support Certificate](../PlusContent/supporter-certificate.md) which can be obtained by [contributing to the Sandboxie project](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md) or purchased in our [online shop](https://xanasoft.com/shop/).
+بعض هذه الميزات (*) متاحة فقط للمستخدمين الحاصلين على [شهادة دعم](../PlusContent/supporter-certificate.md) والتي يمكن الحصول عليها عن طريق [المساهمة في مشروع Sandboxie](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md) أو شراؤها من [متجرنا الإلكتروني](https://xanasoft.com/shop/).
 
-Some more features (**) are available to participants of the [Sandboxie-Insider](../PlusContent/Sandboxie-Insider.md) program.
+بعض الميزات الأخرى (**) متاحة للمشاركين في برنامج [Sandboxie-Insider](../PlusContent/Sandboxie-Insider.md).
 
-#### [Rule Specificity](../PlusContent/RuleSpecificity.md) *
- - With this option rules are prioritized based on their specificity (see changelog/docs for details) this way sub paths can be readable/writeable while parent parts are still protected.
+#### [تحديد القواعد حسب الخصوصية](../PlusContent/RuleSpecificity.md) *
+ - مع هذا الخيار، يتم إعطاء الأولوية للقواعد بناءً على خصوصيتها (راجع سجل التغييرات/الوثائق لمزيد من التفاصيل)، بهذه الطريقة يمكن أن تكون المسارات الفرعية قابلة للقراءة/الكتابة بينما تظل الأجزاء الرئيسية محمية.
 
+#### [صناديق محسنة للأمان](../PlusContent/security-mode.md) *
+ - تقييد رفع صلاحيات استدعاء النظام إلى الاستدعاءات الآمنة والمعروفة فقط
+ - تقييد الوصول إلى نقاط الأجهزة إلى النقاط المعروفة والآمنة فقط
 
-#### [Security enhanced sandboxes](../PlusContent/security-mode.md) *
- - Restrict syscall elevation to approved known safe / filtered syscalls
- - Limit access to device endpoints to known safe / filtered endpoints
+#### [صناديق محسنة للخصوصية](../PlusContent/privacy-mode.md) *
+- باستخدام هذه الميزة، عن طريق تطبيق مجموعة قواعد معدة مسبقًا، يمكن حماية جميع المواقع التي قد تحتوي على بيانات شخصية. التطبيقات التي تعمل داخل صناديق مع حماية البيانات الشخصية سترى جهاز كمبيوتر فارغ بدون بيانات المستخدم.
 
+#### [وضع التقسيم](../PlusContent/compartment-mode.md) *
+ - هذا الوضع مصمم لتحسين التوافق على حساب الأمان، هنا لا يتم استخدام مخطط العزل القائم على الرموز في Sandboxie. العزل يقتصر على مرشح نظام الملفات بالإضافة إلى سجلات ونقاط الاتصال للأجسام. هذا يمكن أن يحسن التوافق مع العديد من التطبيقات بشكل كبير.
 
-#### [Privacy enhanced sandboxes](../PlusContent/privacy-mode.md) *
-- With this feature, by applying a preset rule collection, all locations potentially containing personal data can be protected. Applications running in boxes with personal data protection will see an empty PC with no user data on it.
+#### تكامل القرص الافتراضي **
+ - [دعم RamDisk](../PlusContent/RamDiskSupport.md)، متاح منذ أحدث إصدار Insider، يسمح لك بإنشاء قرص افتراضي في ذاكرة النظام، باستخدام برنامج تشغيل ImDisk، مما يمكن أن يسرع الوصول إلى الملفات ويزيد من السرية حيث سيتم التخلص من جميع محتويات الصندوق عند إلغاء تحميل القرص (يدويًا أو تلقائيًا عند إعادة التشغيل).
+ - [دعم تشفير صندوق الصورة](../PlusContent/BoxEncryption.md) قيد التطوير حاليًا ويسمح بإنشاء بيئات رملية مشفرة لحماية أكبر للبيانات السرية. باستخدام هذه الميزة، يتم تحميل جذر صندوق الملفات من صورة صندوق مشفرة باستخدام AES-XTS، كما تتوفر خوارزميات تشفير أخرى. الإضافات المستقبلية ستتضمن إدارة كلمات مرور الصندوق بشكل آمن وتمديد للسائق لمنع التطبيقات غير العاملة في الصندوق المشفر من الوصول إلى الملفات.
 
+#### تصفية الشبكة وإعادة التوجيه المحسنة **
+ - [حقن البروكسي](../PlusContent/ProxySupport.md) هي ميزة أخرى تم إضافتها في إصدارات Insider، تتيح إجبار أي تطبيق على استخدام بروكسي Socks 5 بدلاً من الاتصال المباشر.
+ - [تسجيل واستهداف وتحويل استعلامات DNS](../PlusContent/DNSFilter.md) يسمح بحظر أو إعادة توجيه استعلامات DNS التي يقوم بها التطبيقات المحصورة في الصناديق لبعض النطاقات المحددة.
 
-#### [Compartment Mode](../PlusContent/compartment-mode.md) *
- - This mode is intended to optimize compatibility at the cost of security, here Sandboxie’s token-based isolation scheme is not used. Isolation is limited to the FS minifilter as well as registry and object callbacks. This has the potential to greatly improve compatibility with various applications.
+#### [دعم WFP (منصة تصفية ويندوز)](../PlusContent/WFPSupport.md)
+ - مع هذه الميزة، يمكن لـ Sandboxie العمل كجدار حماية للتطبيقات حيث يتم تطبيق القواعد على أساس كل صندوق، مما يسمح لنفس التطبيق بالوصول إلى الإنترنت في صندوق واحد بينما يتم حظره في آخر.
 
+#### تكامل قائمة السياق في ويندوز 11
 
-#### Virtual Disk Integration **
- - [RamDisk support](../PlusContent/RamDiskSupport.md), available since the latest insider build, allows you to create a virtual disk in your system's memory, using the ImDisk driver, which can speed up file access and increase confidentiality as all box contents will be discarded when the disk is unmounted (manually or automatically on reboot).
- - [Encrypted Box Image support](../PlusContent/BoxEncryption.md) is currently in development and allows you to create encrypted sandboxed environments for an even greater protection of your confidential data. With this feature the box file root is being mounted from an AES-XTS encrypted box image, other ciphers are available as well. Upcoming additions to this root functionality will contain secure box passphrase handling and a driver extension to prevent applications not running in the encrypted sandbox from accessing the sandboxed files.
+#### تصفية مقابض العمليات/الخيوط (obCallbacks)
+ - باستخدام هذه الآلية يتحسن عزل العمليات بشكل كبير ويوفر أمانًا محسنًا.
 
+#### اعتراض استدعاءات Win32
+ - مع هذه الميزة، يمكن معالجة استدعاءات Win32 كما هو الحال مع استدعاءات NT، مما يساعد في الرسوميات وتسريع الأجهزة.
 
-#### Enhanced network filtering and redirection **
- - [Proxy injection](../PlusContent/ProxySupport.md) is yet another feature which has been added in the insider builds, it allows to force any application to use a Socks 5 proxy instead of a direct connection.
- - [DNS query logging, filtering and redirection](../PlusContent/DNSFilter.md) feature allows you to block, or redirect DNS queries made by sandboxed programs for selected domains.
+#### واجهة مستخدم جديدة مع الوضع الداكن والعديد من الميزات الأخرى
+ - Sandboxie Plus يأتي بواجهة مستخدم جديدة تعتمد على Qt sandman.exe
+ - قائمة تشغيل قابلة للتخصيص لكل صندوق
+ - مفتاح اختصار عالمي لإنهاء جميع الصناديق
+ - محرر قسم INI لتسهيل تكوين الخيارات المتقدمة
+ - أحداث/سكريبتات الصندوق
+ - إمكانية إيقاف التطبيقات المحددة من العمل عالميًا، بغض النظر عن إعدادات الصندوق
 
+#### [اللقطات Snapshots](../PlusContent/BoxSnapshots.md)
+ - يمكن لـ Sandboxie Plus إنشاء لقطات للصندوق، مما يتيح إمكانية الرجوع بسهولة إلى حالة سابقة محددة.
+ - الصندوق المخصص للحذف التلقائي سيعود تلقائيًا عند توفر اللقطة الأخيرة مما يتيح الاستفادة من صندوق نظيف مع إعدادات مسبقة
 
-#### [WFP (Windows Filtering Platform) support](../PlusContent/WFPSupport.md)
- - With this feature, Sandboxie can be like an application firewall which applies the rules on a per-sandbox basis, allowing the same application access to Internet in one box while blocking it in another.
+#### [وحدة المراقبة والتحليل المحسنة](../PlusContent/TraceLog.md)
 
+#### الامتيازات الإدارية الوهمية
+ - يسمح لجميع العمليات في الصندوق بالاعتقاد بأنها تمتلك صلاحيات المسؤول والتصرف وفقًا لذلك، دون منحهم الصلاحيات الفعلية.
 
-#### Windows 11 context menu integration
+#### مراقب حجم الصندوق
+ - مراقبة وعرض حجم الصندوق في عمود خاص
 
+#### تكامل قائمة ابدأ
+ - دمج إدخالات قائمة ابدأ من الصناديق في قائمة ابدأ للنظام المضيف
 
-#### Process/Thread handle filtering (obCallbacks)
- - Using this mechanism greatly improves on isolation of processes and provides enhanced security.
+#### عزل SID للصندوق
+ - بدلاً من استخدام SID تسجيل دخول مجهول، يستخدم SID مخصص لكل صندوق مثل Sandboxie/DefaultBox. بهذه الطريقة، لا يمكن للعمليات من صناديق منفصلة الوصول إلى موارد بعضها البعض.
 
+#### [عملية الخروج Breakout Process](../Content/BreakoutProcess.md)
+ - يسمح بتحديد التطبيقات التي يجب تشغيلها خارج الصندوق عند تشغيلها داخله. 
+ - [Breakout Document](../Content/BreakoutDocument.md) هو امتداد لآلية الخروج المعروفة للسماح بفتح أنواع ملفات محددة محفوظة في مسار مفتوح من داخل الصندوق في تطبيق مرتبط خارج الصندوق. **
 
-#### Win32 syscall hooking
- - With this feature, Win32 syscalls can get the same treatment as NT syscalls, which helps with graphics and HW acceleration.
+#### [تحديد صندوق USB](../PlusContent/USBSandboxing.md) **
+- تسمح هذه الميزة بإدراج أي محرك USB يتم توصيله تلقائيًا في صندوق، مما يضيف طبقة حماية إضافية للنظام.
 
+#### دعم EFS **
+ - دعم الملفات المحمية بنظام الملفات المشفر (EFS)
 
-#### New UI with dark mode and much more
- - Sandboxie-Plus bring an entirely new Qt based UI sandman.exe
- - Customizable per box run menu
- - Global hotkey to terminate all boxes
- - INI section editor for easy configuration of advanced options
- - Box event triggers/scripts
- - Ability to stop selected applications from running globally, regardless of box presets
-
-
-#### [Snapshots](../PlusContent/BoxSnapshots.md)
- - Sandboxie-Plus can create box snapshots, with them it is possible to easily revert a box to a defined previous state.
- - Box set to auto delete will auto-revert when available to the last snapshot allowing to benefit from a fresh clean box each time but with some preset configuration
-
-
-#### [Enhanced debug/trace monitor](../PlusContent/TraceLog.md)
-
-
-#### Fake admin privileges
- - Allows to make all processes in a box think they have admin permissions and act accordingly, without the potential drawbacks of granting them admin permissions
-
-
-#### Box size monitor
- - Monitor and list box size in an own column
-
-
-#### Start Menu integration
- - Integrate start menu entries from sandboxes into the host start menu
-
-
-#### Sandbox SID isolation
- - Instead of using anonymous login SID, it uses custom SIDs per-sandbox like Sandboxie/DefaultBox. This way, processes from separate sandboxes won’t be able accessing each other’s resources.
-
-
-#### [Breakout Process](../Content/BreakoutProcess.md)
- - Allows to specify which applications shall run unsandboxed when launched within the sandbox. A combination of this and ForceProcess allows for a simple priority system.
- - [Document Breakout](../Content/BreakoutDocument.md) is an extension to the already well-known Breakout mechanism to allow to open selected file types saved to an open file path from within the sandbox in an unsandboxed instance of the associated application.  **
-
-
-#### [USB drive sandboxing](../PlusContent/USBSandboxing.md) **
-- This feature allows you to automatically sandbox any USB drive that you plug into your computer, which adds an extra layer of protection to your system.
-
-
-#### EFS Support **
- - Support for EFS (Encrypted File System) protected files.
-
-
-#### ARM64 support for Windows 11 *
- - Support ARM64 natively
- - Support emulated x86
- - Support emulated x64 (ARM64EC)
+#### دعم ARM64 لنظام ويندوز 11 *
+ - دعم ARM64 بشكل أصلي
+ - دعم x86 محاكى
+ - دعم x64 محاكى (ARM64EC)
