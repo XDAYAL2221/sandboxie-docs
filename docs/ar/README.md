@@ -1,21 +1,21 @@
-# Sandboxie Documentation
+# وثائق Sandboxie
 
-[![Markdown links Status](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/action.yml/badge.svg)](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/action.yml) [![Codespell Status](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/codespell.yml/badge.svg)](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/codespell.yml) [![Join our Discord Server](https://img.shields.io/badge/Join-Our%20Discord%20Server%20for%20bugs,%20feedback%20and%20more!-blue?style=flat&logo=discord)](https://discord.gg/S4tFu6Enne)
+[![حالة روابط Markdown](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/action.yml/badge.svg)](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/action.yml) [![حالة Codespell](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/codespell.yml/badge.svg)](https://github.com/sandboxie-plus/sandboxie-docs/actions/workflows/codespell.yml) [![انضم إلى خادم Discord الخاص بنا](https://img.shields.io/badge/Join-Our%20Discord%20Server%20for%20bugs,%20feedback%20and%20more!-blue?style=flat&logo=discord)](https://discord.gg/S4tFu6Enne)
 
-## Introduction
+## المقدمة
 
-Sandboxie is a sandbox-based isolation software for Windows that lets you run untrusted applications without worrying about unwanted changes to your files or registry.
+تطبيق Sandboxie هو برنامج عزل يعتمد على تقنية الصندوق (Sandbox) لنظام ويندوز، يتيح لك تشغيل التطبيقات غير الموثوقة دون القلق بشأن إجراء تغييرات غير مرغوب فيها على ملفاتك أو سجل النظام (Registry).
 
-After Sandboxie became [open source](https://news.sophos.com/en-us/2020/04/09/sandboxie-is-now-an-open-source-tool/), it was decided to release the documentation so that it would be easily updated by the community, as opposed to the documentation available at [sandboxie-plus.com](https://sandboxie-plus.com) and other sources.
+بعد أن أصبح Sandboxie [مفتوح المصدر](https://news.sophos.com/en-us/2020/04/09/sandboxie-is-now-an-open-source-tool/)، قرر نشر هذه الوثائق بحيث يمكن للمجتمع تحديثها بسهولة، بدلاً من الاعتماد على الوثائق المتوفرة على [sandboxie-plus.com](https://sandboxie-plus.com) ومصادر أخرى.
 
-## Documentation Index
+## فهرس الوثائق
 
-[All pages (A-Z)](Content/AllPages.md)
+[جميع الصفحات (A-Z)](Content/AllPages.md)
 
-## Get Sandboxie
+## الحصول على Sandboxie
 
-[Feature/Edition comparison](Content/FeatureComparison.md) | [System requirements](https://github.com/sandboxie-plus/Sandboxie#sandboxie-plus--classic) | [Download the latest release](https://github.com/sandboxie-plus/Sandboxie/releases/latest)
+[مقارنة الميزات/الإصدارات](Content/FeatureComparison.md) | [متطلبات النظام](https://github.com/sandboxie-plus/Sandboxie#sandboxie-plus--classic) | [تحميل أحدث إصدار](https://github.com/sandboxie-plus/Sandboxie/releases/latest)
 
-## Contribute
+## المساهمة
 
-If you have development, testing or translation skills, then feel free to check out our [Contribution guidelines](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md).
+إذا كانت لديك مهارات في التطوير أو الاختبار أو الترجمة، فلا تتردد في الاطلاع على [إرشادات المساهمة](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md).
